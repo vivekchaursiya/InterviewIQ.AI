@@ -43,7 +43,7 @@ const Step1SetUp = ({onstart}) => {
             setAnalyzing(false);
         }
         catch(err){
-            console.error(err)
+            console.log(err)
         }
     }
     const handleStart=async()=>{
