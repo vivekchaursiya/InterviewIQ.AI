@@ -11,6 +11,7 @@ import Pricing from "./pages/Pricing";
 import InterviewReport from "./pages/InterviewReport";
 
 export const serverURL = "https://interviewiq-ai-1pyz.onrender.com";
+//export const serverURL = "http://localhost:8000";
 const App = () => {
   const dispatch = useDispatch();
   useEffect(() => {

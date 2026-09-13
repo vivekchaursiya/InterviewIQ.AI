@@ -45,8 +45,18 @@ export const analyzeResume= async(req,res)=>{
                 content: resumeText
             }
         ];
-        const aiResponse=await askAI(messages)
-        const parsed=JSON.parse(aiResponse)
+        //const aiResponse=await askAI(messages)
+        //const parsed=JSON.parse(aiResponse)
+        const aiResponse = await askAI(messages);
+
+        // Markdown ```json remove karo
+        const cleaned = aiResponse
+        .replace(/```json\s*/i, "")
+        .replace(/```/g, "")
+        .trim();
+
+        const parsed = JSON.parse(cleaned);
+
         fs.unlinkSync(filepath)
         res.json({
             role:parsed.role,
