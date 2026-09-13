@@ -6,6 +6,8 @@ import Interview from "../models/interview_models.js";
 import { toNamespacedPath } from "path/win32";
 
 export const analyzeResume= async(req,res)=>{
+    console.log("BODY:", req.body);
+    console.log("FILE:", req.file);
     try{
         if(!req.file){
             return res.status(400).json({message:"Resume required"})

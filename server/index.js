@@ -9,6 +9,9 @@ import userRouter from "./routes/user.route.js"
 import interviewRouter from "./routes/interview.route.js"
 import paymentRouter from "./routes/payment.route.js"
 const app = express()
+if (!fs.existsSync("uploads")) {
+  fs.mkdirSync("uploads");
+}
 app.use(express.json())
 app.use(cookieParser())
 const allowedOrigins = [
