@@ -15,7 +15,7 @@ export const googleAuth=async(req,res)=>{
             httpOnly:true,
             secure:true,
             sameSite:"none",
-            // path: "/",
+            path: "/",
             // domain: ".onrender.com",
             maxAge:7 * 24 * 60*60 *1000
 
@@ -32,7 +32,7 @@ export const logOut=async(req,res)=>{
         httpOnly: true,
         secure: true,
         sameSite: "none",
-        // path: "/",
+        path: "/",
         // domain: ".onrender.com",
         });
         return res.status(200).json({message:"LogOut Successfully"})
