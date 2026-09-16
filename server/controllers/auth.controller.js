@@ -16,7 +16,7 @@ export const googleAuth=async(req,res)=>{
             secure:true,
             sameSite:"none",
             path: "/",
-            // domain: ".onrender.com",
+            domain: "https://interviewiq-ai-client-l7hv.onrender.com",
             maxAge:7 * 24 * 60*60 *1000
 
         })
