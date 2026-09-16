@@ -16,7 +16,7 @@ export const googleAuth=async(req,res)=>{
             secure:true,
             sameSite:"none",
             path: "/",
-            domain: "https://interviewiq-ai-client-l7hv.onrender.com",
+            domain: ".onrender.com",
             maxAge:7 * 24 * 60*60 *1000
 
         })
@@ -33,7 +33,7 @@ export const logOut=async(req,res)=>{
         secure: true,
         sameSite: "none",
         path: "/",
-        domain: "https://interviewiq-ai-client-l7hv.onrender.com",
+        domain: ".onrender.com",
         });
         return res.status(200).json({message:"LogOut Successfully"})
 
