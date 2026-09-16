@@ -19,6 +19,8 @@ export const googleAuth=async(req,res)=>{
             maxAge:7 * 24 * 60*60 *1000
 
         })
+        console.log("Cookie set");
+        console.log(res.getHeaders()["set-cookie"]);
         return res.status(200).json(user);
     }
     catch(error){
