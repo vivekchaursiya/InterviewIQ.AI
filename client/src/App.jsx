@@ -9,6 +9,7 @@ import InterviewPage from "./pages/InterviewPage";
 import InterviewHistory from "./pages/InterviewHistory";
 import Pricing from "./pages/Pricing";
 import InterviewReport from "./pages/InterviewReport";
+axios.defaults.withCredentials = true;
 
 export const serverURL = "https://interviewiq-ai-1pyz.onrender.com";
 //export const serverURL = "http://localhost:8000";
