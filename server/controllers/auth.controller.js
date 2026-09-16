@@ -33,7 +33,7 @@ export const logOut=async(req,res)=>{
         secure: true,
         sameSite: "none",
         path: "/",
-        // domain: ".onrender.com",
+        domain: "https://interviewiq-ai-client-l7hv.onrender.com",
         });
         return res.status(200).json({message:"LogOut Successfully"})
 
